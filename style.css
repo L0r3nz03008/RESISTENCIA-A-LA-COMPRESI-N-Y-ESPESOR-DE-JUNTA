@@ -1,0 +1,163 @@
+body {
+    font-family: sans-serif;
+    background-color: #F5E0C4; /* Amarillo ocre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    padding: 30px;
+    border: 5px double #333; /* Doble borde azul oscuro */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.left-section, .right-section {
+    width: 50%;
+    padding: 20px;
+}
+
+.left-section {
+    border-right: 2px solid #ccc;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    color: #333;
+}
+
+input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#resultados-izquierda, #resultados-derecha {
+    margin-top: 20px;
+}
+
+#tabla-materiales, #tabla-materiales-derecha, #dosificacion-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto; /* Centra la tabla */
+}
+
+#tabla-materiales th, #tabla-materiales td,
+#dosificacion-tabla th, #dosificacion-tabla td,
+#tabla-materiales-derecha th, #tabla-materiales-derecha td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+#resistencia-recuadro, #espesor-recuadro,
+#volumen-total-recuadro, #porcentaje-aditivo-recuadro, #reduccion-recuadro, #nuevo-espesor-recuadro {
+    border: 5px solid #333;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.info-icon {
+    margin-left: 10px;
+    cursor: help;
+}
+
+.info-icon:hover {
+    background-color: #ddd;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+#resistencia, #volumenTotalValor, #porcentajeAditivoValor, #reduccionValor, #nuevoEspesorValor {
+    font-weight: bold; /* Letra en negrita */
+    color: #001f3f; /* Azul oscuro */
+}
+
+#dosificacion-tabla {
+    margin-bottom: 20px;
+}
+
+#reset {
+    background-color: #f44336;
+}
+
+#reset:hover {
+    background-color: #d32f2f;
+}
+
+.grafico-dosificacion {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.barra {
+    background-color: #4CAF50;
+    width: 50px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cemento {
+    background-color: #FFD700; /* Amarillo */
+}
+
+.agua {
+    background-color: #00BCD4; /* Azul claro */
+}
+
+.agregadoFino {
+    background-color: #FF5733; /* Naranja */
+}
+
+.agregadoGrueso {
+    background-color: #795548; /* Marrón */
+}
+
+#porcentaje-aditivo-recuadro {
+    background-color: lightgreen;
+}

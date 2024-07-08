@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EFICACIA DEL ADITIVO SCRA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>EFICACIA DEL ADITIVO SCRA</h1>
+        <div class="left-section">
+            <h2>Calculadora de Materiales</h2>
+            <div class="form-container">
+                <div class="input-group">
+                    <label for="ancho">Ancho de la Junta (cm):</label>
+                    <input type="number" id="ancho" min="1" max="5" value="2">
+                    <span class="info-icon" title="Ancho de la separación entre losas de concreto.">?</span>
+                </div>
+                <div class="input-group">
+                    <label for="largo">Largo Total del Piso (m):</label>
+                    <input type="number" id="largo" min="1" value="5">
+                    <span class="info-icon" title="Longitud total del piso a cubrir.">?</span>
+                </div>
+                <div class="input-group">
+                    <label for="anchoTotal">Ancho Total del Piso (m):</label>
+                    <input type="number" id="anchoTotal" min="1" value="5">
+                    <span class="info-icon" title="Ancho total del área del piso.">?</span>
+                </div>
+                <div class="input-group">
+                    <label for="personas">Personas Diarias:</label>
+                    <input type="number" id="personas" min="1" value="200">
+                    <span class="info-icon" title="Número de personas que transitarán por el piso diariamente.">?</span>
+                </div>
+                <div class="input-group">
+                    <label for="espesorPiso">Espesor del Piso (cm):</label>
+                    <input type="number" id="espesorPiso" min="5" value="10">
+                    <span class="info-icon" title="Grosor del concreto del piso.">?</span>
+                </div>
+                <button id="calcular">Calcular</button>
+                <button id="reset">Restablecer</button>
+            </div>
+            <div id="resultados-izquierda">
+                <h2>Resultados</h2>
+                <div id="tabla-materiales">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Material</th>
+                                <th>Cantidad</th>
+                                <th>Info</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cemento</td>
+                                <td id="cemento"></td>
+                                <td class="info-icon" title="Proporción de cemento en la mezcla.">?</td>
+                            </tr>
+                            <tr>
+                                <td>Agua</td>
+                                <td id="agua"></td>
+                                <td class="info-icon" title="Cantidad de agua necesaria para la mezcla.">?</td>
+                            </tr>
+                            <tr>
+                                <td>Agregado Fino</td>
+                                <td id="agregadoFino"></td>
+                                <td class="info-icon" title="Cantidad de arena utilizada en la mezcla.">?</td>
+                            </tr>
+                            <tr>
+                                <td>Agregado Grueso</td>
+                                <td id="agregadoGrueso"></td>
+                                <td class="info-icon" title="Cantidad de grava utilizada en la mezcla.">?</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="resistencia-recuadro">
+                    <p id="resistencia"></p>
+                    <span class="info-icon" title="Resistencia a la compresión del concreto, indica su capacidad para soportar cargas.">?</span>
+                </div>
+                <div id="volumen-total-recuadro">
+                    <p id="volumenTotal">Volumen Total: <span id="volumenTotalValor"></span> m³</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-section">
+            <h2>Comparación</h2>
+            <div id="dosificacion-tabla">
+                <h3>Dosificación por 1 m³ de Concreto (210 kg/cm²)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo de Concreto</th>
+                            <th>Resistencia (kg/cm²)</th>
+                            <th>Cemento (kg)</th>
+                            <th>Arena (m³)</th>
+                            <th>Grava (m³)</th>
+                            <th>Agua (litros)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1-2-3</td>
+                            <td>210</td>
+                            <td>350</td>
+                            <td>0.56</td>
+                            <td>0.84</td>
+                            <td>180</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="resultados-derecha">
+                <div id="tabla-materiales-derecha">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Material</th>
+                                <th>Cantidad</th>
+                                <th>Info</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cemento</td>
+                                <td id="cementoDerecha"></td>
+                                <td class="info-icon" title="Proporción de cemento en la mezcla.">?</td>
+                            </tr>
+                            <tr>
+                                <td>Agua</td>
+                                <td id="aguaDerecha"></td>
+                                <td class="info-icon" title="Cantidad de agua necesaria para la mezcla.">?</td>
+                            </tr>
+                            <tr>
+                                <td>Agregado Fino</td>
+                                <td id="agregadoFinoDerecha"></td>
+                                <td class="info-icon" title="Cantidad de arena utilizada en la mezcla.">?</td>
+                            </tr>
+                            <tr>
+                                <td>Agregado Grueso</td>
+                                <td id="agregadoGruesoDerecha"></td>
+                                <td class="info-icon" title="Cantidad de grava utilizada en la mezcla.">?</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="porcentaje-aditivo-recuadro">
+                    <p id="porcentajeAditivo">Porcentaje de Aditivo: <span id="porcentajeAditivoValor"></span> %</p>
+                </div>
+                <div id="reduccion-recuadro">
+                    <p id="reduccion">Porcentaje de Reducción: <span id="reduccionValor"></span> </p>
+                </div>
+                <div id="nuevo-espesor-recuadro">
+                    <p id="nuevoEspesor">Nuevo Espesor de Junta: <span id="nuevoEspesorValor"></span> cm</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
